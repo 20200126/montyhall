@@ -52,20 +52,20 @@ public class MontyHallSimulator {
                 MontyHall.PlayerLast playerLast = hostsTurn.discardDoor();
         
                 // First we attempt with keep and record result 
-                tryKeep(playerLast);
+                keepDoor(playerLast);
         
                 // First we attempt with keep and record result
-                trySwap(playerLast);
+                swapDoor(playerLast);
         }
         
-        private void tryKeep( MontyHall.PlayerLast playerLast ) {
+        private void keepDoor( MontyHall.PlayerLast playerLast ) {
                 MontyHall.GameResults results = playerLast.keepDoor();
                 if ( results.playerWon() ) {
                         keeptWins.incrementAndGet();
                 }
         }
         
-        private void trySwap( MontyHall.PlayerLast playerLast ) {
+        private void swapDoor( MontyHall.PlayerLast playerLast ) {
                 MontyHall.GameResults results = playerLast.swapDoor();
                 if ( results.playerWon() ) {
                         swapWins.incrementAndGet();
