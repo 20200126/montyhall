@@ -45,9 +45,10 @@ public class MontyHallSimulator {
                 // We declare the game started which returns an object for next available actions
                 MontyHall.PlayerStarts playerStarts = game.start();
         
-                // Can only select a door 
+                // Can only select a door randomly 
                 MontyHall.HostsTurn hostsTurn = playerStarts.selectDoorRandomly();
         
+                // Now host can only discard a door
                 MontyHall.PlayerLast playerLast = hostsTurn.discardDoor();
         
                 // First we attempt with keep and record result 
@@ -55,7 +56,6 @@ public class MontyHallSimulator {
         
                 // First we attempt with keep and record result
                 trySwap(playerLast);
-                
         }
         
         private void tryKeep( MontyHall.PlayerLast playerLast ) {
