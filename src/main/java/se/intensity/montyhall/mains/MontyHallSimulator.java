@@ -57,17 +57,18 @@ public class MontyHallSimulator {
                 trySwap(playerLast);
                 
         }
-        private void trySwap( MontyHall.PlayerLast playerLast ) {
-                MontyHall.GameResults results = playerLast.swapDoor();
-                if ( results.playerWon() ) {
-                        swapWins.incrementAndGet();
-                }
-        }
         
         private void tryKeep( MontyHall.PlayerLast playerLast ) {
                 MontyHall.GameResults results = playerLast.keepDoor();
                 if ( results.playerWon() ) {
                         keeptWins.incrementAndGet();
+                }
+        }
+        
+        private void trySwap( MontyHall.PlayerLast playerLast ) {
+                MontyHall.GameResults results = playerLast.swapDoor();
+                if ( results.playerWon() ) {
+                        swapWins.incrementAndGet();
                 }
         }
         

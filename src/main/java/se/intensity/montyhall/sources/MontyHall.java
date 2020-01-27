@@ -123,8 +123,11 @@ public class MontyHall {
                 
         }
         
+        /////////////////////////////////////////////////////////////////////
+        
         public final class GameResults {
                 GameResults(){}
+                
                 public boolean playerWon() {
                         return selected.isPrized();
                 }
