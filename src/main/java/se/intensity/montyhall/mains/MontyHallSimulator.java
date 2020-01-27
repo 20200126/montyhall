@@ -74,7 +74,7 @@ public class MontyHallSimulator {
         public void presentResults() {
                 System.out.println( "Simulation took " + TimeUnit.NANOSECONDS.toMillis( elapsed ) + " ms." );
                 System.out.println( "For " + simulations + " simulations, player won by keeping  " + keepWins.get() + " times." );
-                System.out.println( "For " + simulations + " simulations, player won by swapping " + swapWins.get()  + " times." );
+                System.out.println( "For " + simulations + " simulations, player won by swapping " + swapWins.get() + " times." );
         }
         
         public static void main( String[] args ) {
