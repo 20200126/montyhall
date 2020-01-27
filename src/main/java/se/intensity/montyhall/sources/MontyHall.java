@@ -131,5 +131,12 @@ public class MontyHall {
                 public boolean playerWon() {
                         return selected.isPrized();
                 }
+        
+                /**
+                 *  Never called
+                 */
+                public String playerPrize() {
+                        return selected.getPrize();
+                }
         }
 }
