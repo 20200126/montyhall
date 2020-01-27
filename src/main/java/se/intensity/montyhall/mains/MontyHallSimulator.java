@@ -24,11 +24,11 @@ public class MontyHallSimulator {
         /**
          * Many games
          */
-        public void simulateAll() {
+        public void simulateGames() {
                 long start = System.nanoTime();
                 
                 IntStream.range( 0, simulations ).parallel().forEach( i -> {
-                        simulateOne();
+                        simulateGame();
                 } );
                 
                 this.elapsed = System.nanoTime() - start;
@@ -37,8 +37,7 @@ public class MontyHallSimulator {
         /**
          * One game
          */
-        private void simulateOne() {
-                
+        private void simulateGame() {
                 // New game created
                 MontyHall game = new MontyHall( "Volvo XC90" );
         
@@ -54,7 +53,7 @@ public class MontyHallSimulator {
                 // First we attempt with keep and record result 
                 keepDoor(playerLast);
         
-                // First we attempt with keep and record result
+                // Now we attempt with swap and record result
                 swapDoor(playerLast);
         }
         
@@ -89,7 +88,7 @@ public class MontyHallSimulator {
                 {
                         MontyHallSimulator simulator = new MontyHallSimulator( simulations );
         
-                        simulator.simulateAll();
+                        simulator.simulateGames();
         
                         simulator.presentResults();
                 }
