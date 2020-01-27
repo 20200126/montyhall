@@ -11,8 +11,8 @@ public class MontyHallSimulator {
         
         // Atomic because we run several simulations concurrently
         private AtomicInteger
-                keeptWins = new AtomicInteger(),
-                swapWins  = new AtomicInteger()
+                keepWins = new AtomicInteger(),
+                swapWins = new AtomicInteger()
         ;
         
         private long elapsed;
@@ -60,7 +60,7 @@ public class MontyHallSimulator {
         private void keepDoor( MontyHall.PlayerLast playerLast ) {
                 MontyHall.GameResults results = playerLast.keepDoor();
                 if ( results.playerWon() ) {
-                        keeptWins.incrementAndGet();
+                        keepWins.incrementAndGet();
                 }
         }
         
@@ -73,7 +73,7 @@ public class MontyHallSimulator {
         
         public void presentResults() {
                 System.out.println( "Simulation took " + TimeUnit.NANOSECONDS.toMillis( elapsed ) + " ms." );
-                System.out.println( "For " + simulations + " simulations, player won by keeping  " + keeptWins.get() + " times." );
+                System.out.println( "For " + simulations + " simulations, player won by keeping  " + keepWins.get() + " times." );
                 System.out.println( "For " + simulations + " simulations, player won by swapping " + swapWins.get()  + " times." );
         }
         
