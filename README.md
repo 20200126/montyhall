@@ -1,6 +1,6 @@
 # Monty Hall Game + Tests + Simulations
 
-- Tested with: JDK 11 + Maven 3.6.1
+Tested with: JDK 11 + Maven 3.6.1
 
 ### Structure 
 
