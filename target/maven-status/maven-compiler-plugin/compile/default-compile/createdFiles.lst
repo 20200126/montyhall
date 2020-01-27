@@ -1,0 +1,8 @@
+se/intensity/core/sources/Numbers.class
+se/intensity/montyhall/sources/MontyHall.class
+se/intensity/montyhall/mains/MontyHallSimulator.class
+se/intensity/montyhall/sources/MontyHall$HostsTurn.class
+se/intensity/montyhall/sources/MontyHall$PlayerLast.class
+se/intensity/montyhall/sources/MontyHall$GameResults.class
+se/intensity/montyhall/sources/MontyHall$PlayerStarts.class
+se/intensity/montyhall/sources/Door.class

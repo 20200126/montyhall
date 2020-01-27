@@ -15,9 +15,10 @@ import java.util.stream.IntStream;
 /**
  * Test for Monty Hall game including simulations
  */
-public class MontyHallTests {
+
+public class MontyHallTest {
         
-        public MontyHallTests() {
+        public MontyHallTest() {
         }
         
         @BeforeClass public static void beforeTests() {}
