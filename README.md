@@ -16,7 +16,7 @@ We've created unit tests that go all the way up to simulation level and checks t
 
 To run the java main class, it can simply be done from terminal:
 
-`mvn clean install exec:java -Dexec.mainClass="se.intensity.montyhall.mains.MontyHallSimulator" -Dexec.args="1000000"`
+`mvn exec:java -Dexec.mainClass="se.intensity.montyhall.mains.MontyHallSimulator" -Dexec.args="1000000"`
 
 after having run 
 
@@ -25,4 +25,3 @@ after having run
 at least once prior.
 
 ![](https://i.imgur.com/ZWsv3lK.png)
-
