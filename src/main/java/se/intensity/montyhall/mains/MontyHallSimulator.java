@@ -29,7 +29,7 @@ public class MontyHallSimulator {
                 
                 IntStream.range( 0, simulations ).parallel().forEach( i -> {
                         simulateGame();
-                } );
+                });
                 
                 this.elapsed = System.nanoTime() - start;
         }

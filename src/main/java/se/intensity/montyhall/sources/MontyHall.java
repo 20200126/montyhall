@@ -61,14 +61,13 @@ public class MontyHall {
         }
         
         private void discardDoor() {
-                // After player has selected, doors.size() is known to be of size 2.
-                // There is only one winner door.
-                // If first door is prized, second has to be a looser one.    
-                // If first one is not prized, then it is a looser. 
-                int index = 0; if ( getDoor(index).isPrized() ) {
-                        index = 1;
+                // There is only one winner door. Find first that is a looser door. 
+                int index = -1; while ( ++index < remaining.size() ) {
+                        if ( !getDoor(index).isPrized() ) break;  
                 }
-                remaining.remove( index );
+                
+                // Now remove it
+                remaining.remove(index);
         }
         
         /////////////////////////////////////////////////////////////////////
@@ -139,4 +138,7 @@ public class MontyHall {
                         return selected.getPrize();
                 }
         }
+        
 }
+
+
